@@ -209,13 +209,38 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:22px 0 40px}
 .tv-btn.prev{left:20px}.tv-btn.next{right:20px}
 .tv-btn:hover{background:var(--red)}
 @media (max-width:720px){.tv-btn{width:36px;height:36px;font-size:20px;top:calc(50% - 37px)}.tv-btn.prev{left:14px}.tv-btn.next{right:14px}}
+/* planos */
+.plans-grid{align-items:stretch}
+.plan-card{display:flex;flex-direction:column}
+.plan-card ul{flex:1}
+.plan-card .button{width:100%}
+.plan-price small{font:500 14px "DM Sans",sans-serif;color:var(--mut);letter-spacing:0}
+.plan-card.featured{border-color:var(--red);box-shadow:0 24px 60px -32px #e5324b88}
+.plan-card.featured .plan-badge{border-color:var(--red);color:var(--red2) !important}
+.plan-card .muted{font-size:14px}
+.plan-card.avulso{justify-self:center;width:min(100%,520px)}
+@media (min-width:900px){.plans-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.plan-card.avulso{grid-column:1/-1}}
+/* plano personalizado */
+.plan-card.custom{justify-self:center;width:min(100%,640px)}
+@media (min-width:900px){.plan-card.custom{grid-column:1/-1}}
+.builder{display:grid;gap:10px;margin:14px 0 6px}
+.b-row{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:10px 14px}
+.step{display:flex;align-items:center;gap:12px}
+.step button{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--s2);color:var(--fg);font-size:20px;line-height:1;cursor:pointer}
+.step button:hover{border-color:var(--red2)}
+.step output{min-width:26px;text-align:center;font:800 18px var(--disp)}
+.b-extras{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.b-extras label{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px;cursor:pointer;color:#d7d4dc}
+.b-extras input{accent-color:var(--red)}
+.b-extras label:has(input:checked){border-color:var(--red);color:var(--fg)}
+#b-msg{min-height:1.3em;margin:6px 0 10px;color:var(--red2)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none !important;transition:none !important}}
 </style>
 </head>
 <body>
 <nav class="nav"><div class="nav-in"><a class="brand" href="#top">Henriquix</a><div class="links"><a href="#sobre">Sobre</a><a href="#projetos">Projetos</a><a href="#planos">Planos</a><a href="#contato">Contato</a></div></div></nav>
 <header class="hero" id="top">
-  <h1>Edição de vídeo e design com ritmo e identidade</h1>
+  <h1>Seja bem-vindo ao meu portfólio</h1>
   <p class="lead">Sou o Henrique: edito vídeos, Reels e thumbnails e crio peças para redes sociais.</p>
   <div class="cta"><a class="button primary" href="#projetos">Ver projetos</a><a class="button" href="https://wa.me/558881771241" target="_blank" rel="noopener">Pedir orçamento</a></div>
   <div class="tl" aria-hidden="true">
@@ -429,6 +454,64 @@ footer{text-align:center;color:var(--mut);font-size:13px;padding:22px 0 40px}
         <p class="muted">Escolha o formato que combina com seu projeto. Os pacotes são ajustados conforme a quantidade de conteúdo, complexidade e prazo.</p>
         <div class="plans-grid">
           <article class="plan-card">
+            <h3>Básico</h3>
+            <div class="plan-price">R$ 500 <small>por mês</small></div>
+            <ul>
+              <li>4 vídeos por mês</li>
+              <li>Edição básica</li>
+              <li>Até 1 hora de material bruto por vídeo</li>
+              <li>Entrega até 4 dias</li>
+              <li>2 revisões por vídeo</li>
+              </ul>
+            <a class="button" href="https://wa.me/558881771241?text=Ol%C3%A1%2C%20Henriquix!%20Quero%20o%20plano%20B%C3%A1sico." target="_blank" rel="noopener">Contratar plano</a>
+          </article>
+          <article class="plan-card featured">
+            <span class="plan-badge">MAIS COMPLETO</span>
+            <h3>Profissional</h3>
+            <p class="muted">Mais volume, mais acabamento e o melhor custo-benefício.</p>
+            <div class="plan-price">R$ 960 <small>por mês</small></div>
+            <ul>
+              <li>8 vídeos por mês</li>
+              <li>Edição avançada</li>
+              <li>Até 1 hora de material bruto por vídeo</li>
+              <li>Entrega até 3 dias</li>
+              <li>4 revisões</li>
+              </ul>
+            <a class="button primary" href="https://wa.me/558881771241?text=Ol%C3%A1%2C%20Henriquix!%20Quero%20o%20plano%20Profissional." target="_blank" rel="noopener">Contratar plano</a>
+          </article>
+          <article class="plan-card">
+            <h3>Reels / Shorts</h3>
+            <p class="muted">Foco total em conteúdo vertical e viral.</p>
+            <div class="plan-price">R$ 750 <small>por mês</small></div>
+            <ul>
+              <li>10 shorts por mês</li>
+              <li>Cortes dinâmicos + legendas</li>
+              <li>Efeitos e sons virais</li>
+              <li>Entrega semanal</li>
+              <li>1 revisão por reels/shorts</li>
+              <li>Formato TikTok / Shorts / Reels</li>
+              <li>Correção de cor</li>
+              </ul>
+            <a class="button" href="https://wa.me/558881771241?text=Ol%C3%A1%2C%20Henriquix!%20Quero%20o%20plano%20Reels%20%2F%20Shorts." target="_blank" rel="noopener">Contratar plano</a>
+          </article>
+          <article class="plan-card custom">
+            <span class="plan-badge">PERSONALIZADO</span>
+            <h3>Monte o seu plano</h3>
+            <p class="muted">Escolha o que você precisa por mês e envie pelo WhatsApp para receber uma proposta sob medida.</p>
+            <div class="builder">
+              <div class="b-row"><span>Vídeos por mês</span><div class="step"><button type="button" aria-label="Diminuir vídeos" onclick="stepPlan('v',-1)">−</button><output id="n-v">0</output><button type="button" aria-label="Aumentar vídeos" onclick="stepPlan('v',1)">+</button></div></div>
+              <div class="b-row"><span>Shorts / Reels por mês</span><div class="step"><button type="button" aria-label="Diminuir shorts e reels" onclick="stepPlan('s',-1)">−</button><output id="n-s">0</output><button type="button" aria-label="Aumentar shorts e reels" onclick="stepPlan('s',1)">+</button></div></div>
+              <div class="b-row"><span>Thumbnails por mês</span><div class="step"><button type="button" aria-label="Diminuir thumbnails" onclick="stepPlan('t',-1)">−</button><output id="n-t">0</output><button type="button" aria-label="Aumentar thumbnails" onclick="stepPlan('t',1)">+</button></div></div>
+              <div class="b-extras">
+                <label><input type="checkbox" value="Legendas dinâmicas"> Legendas dinâmicas</label>
+                <label><input type="checkbox" value="Correção de cor"> Correção de cor</label>
+                <label><input type="checkbox" value="Efeitos e sons virais"> Efeitos e sons virais</label>
+              </div>
+            </div>
+            <p class="plan-note" id="b-msg" aria-live="polite"></p>
+            <a class="button primary" href="#" target="_blank" rel="noopener" onclick="return sendPlan(event)">Enviar pelo WhatsApp</a>
+          </article>
+          <article class="plan-card avulso">
             <span class="plan-badge" style="background:#404040">SOB DEMANDA</span>
             <h3>Projeto avulso</h3>
             <div class="plan-price">Valor por entrega</div>
@@ -521,6 +604,24 @@ document.querySelectorAll('.project,.thumb-card:not(.ig-card)').forEach(el=>{
 });
 
 function thumbMove(d){const t=document.getElementById('thumb-track');if(t)t.scrollBy({left:d*t.clientWidth,behavior:'smooth'});}
+
+// Plano personalizado
+const customPlan={v:0,s:0,t:0};
+function stepPlan(k,d){customPlan[k]=Math.max(0,Math.min(30,customPlan[k]+d));document.getElementById('n-'+k).textContent=customPlan[k];}
+function sendPlan(e){
+  const p=customPlan,parts=[];
+  if(p.v)parts.push(p.v+(p.v>1?' vídeos':' vídeo')+' por mês');
+  if(p.s)parts.push(p.s+(p.s>1?' shorts/reels':' short/reel')+' por mês');
+  if(p.t)parts.push(p.t+(p.t>1?' thumbnails':' thumbnail')+' por mês');
+  const msg=document.getElementById('b-msg');
+  if(!parts.length){e.preventDefault();msg.textContent='Escolha pelo menos um item para montar o plano.';return false;}
+  msg.textContent='';
+  const extras=[...document.querySelectorAll('.b-extras input:checked')].map(i=>i.value);
+  let text='Olá, Henriquix! Quero montar um plano personalizado: '+parts.join(', ')+'.';
+  if(extras.length)text+=' Extras: '+extras.join(', ')+'.';
+  e.currentTarget.href='https://wa.me/558881771241?text='+encodeURIComponent(text);
+  return true;
+}
 </script>
 </body>
 </html>
